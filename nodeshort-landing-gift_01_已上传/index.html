@@ -11,10 +11,12 @@
   <meta property="og:description" content="纯网页端｜看你爱的剧，自动领取金币、DP、钻石；娱乐也是投资。" />
   <meta property="og:image" content="./assets/nodeshort-og-1200x630.png" />
   <meta property="og:url" content="https://www.nodeshort.com/h5/#/?code=9HKKIP" />
+
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
   n.queue=[];t=b.createElement(e);t.async=!0;
   t.src=v;s=b.getElementsByTagName(e)[0];
@@ -26,6 +28,7 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=855402777027838&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel Code -->
+
   <style>
     :root{
       --bg:#0b0b0c;--card:#131316;--muted:#a6a8ad;--text:#f3f4f6;--gold:#efb21a;--accent:#e9a700;--brand:#ffd36b;--line:#212227;--shadow:0 10px 30px rgba(0,0,0,.35);
@@ -40,6 +43,7 @@
     img{display:block;max-width:100%}
     a{color:inherit;text-decoration:none;cursor:pointer}
     .container{width:min(1120px,100%);margin-inline:auto;padding:0 16px}
+
     header{position:sticky;top:0;z-index:50;background:color-mix(in oklch, var(--bg) 90%, transparent);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center}
@@ -47,30 +51,43 @@
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:12px;padding:14px 18px;background:linear-gradient(135deg,var(--brand),var(--accent));color:var(--btn-fg);font-weight:800;box-shadow:var(--shadow);cursor:pointer;transition:.2s transform}
     .btn:hover{transform:translateY(-2px)}
     .btn.secondary{background:transparent;color:var(--text);border:1px solid var(--line)}
+
     .hero{padding:44px 0 28px;background:radial-gradient(60% 70% at 70% 0%, color-mix(in oklch, var(--brand) 30%, transparent), transparent 65%)}
     .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
     @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
     .tag{display:inline-flex;align-items:center;gap:8px;color:#111;background:var(--brand);padding:6px 10px;border-radius:999px;font-weight:800;font-size:.9rem}
     .hero h1{margin:14px 0 10px;font-size:clamp(28px,4.2vw,44px)}
     .lead{color:var(--muted);font-size:clamp(14px,1.8vw,17px)}
+
     .stats{display:flex;gap:18px;flex-wrap:wrap;margin:16px 0}
     .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;min-width:170px;box-shadow:var(--shadow)}
     .stat b{font-size:20px;color:var(--gold)}
+
     .section{padding:28px 0}
     .card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
+
     .token{display:flex;gap:14px;align-items:center}
     .token img{width:42px;height:42px}
     .list{display:grid;gap:10px;margin:0;padding:0}
     .list li{list-style:none;display:flex;gap:10px;align-items:flex-start}
     .idx{background:color-mix(in oklch, var(--line) 60%, var(--bg));border-radius:8px;min-width:28px;text-align:center;color:var(--muted)}
     .hr{height:1px;background:var(--line);margin:18px 0}
+
     .carousel{position:relative;overflow:hidden;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow);width:100%;max-width:420px;margin:auto}
     .slides{display:flex;transition:transform .5s ease}
     .slides img{flex:0 0 100%;width:100%;height:100%;object-fit:cover}
     .dots{position:absolute;inset:auto 0 10px 0;display:flex;justify-content:center;gap:8px}
     .dot{width:8px;height:8px;border-radius:50%;background:color-mix(in oklch, var(--muted) 60%, transparent)}
+    .dot.active{background:var(--brand)}
+    @media (min-width:0){#carousel{aspect-ratio:9/16;max-height:80vh;}#carousel .slides{height:100%}}
+
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted)}
+    .footer-col{text-align:center}
+    .footer-links{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+    .footer-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 22px;min-width:260px;box-shadow:var(--shadow);cursor:pointer;transition:.2s transform}
+    .footer-card:hover{transform:translateY(-2px)}
   </style>
 </head>
 <body>
@@ -82,6 +99,7 @@
       <div style="display:flex;gap:10px;align-items:center">
         <button id="themeToggle" class="btn secondary" aria-label="切换主题">🌙/☀️ 主题</button>
         <a href="https://www.nodeshort.com/h5/#/?code=9HKKIP" class="btn" target="_blank" rel="noopener">立即参与</a>
+        <a href="#faq" class="btn secondary">常见问题</a>
         <a class="btn secondary" id="joinGroup">加入Telegram群组</a>
         <a class="btn secondary" id="contactCS">联系客服</a>
       </div>
@@ -179,17 +197,26 @@
       </div>
     </section>
 
-    <section class="section" id="platform-info">
+    <section class="section" id="faq">
       <div class="container">
-        <h2>平台亮点与成长数据</h2>
-        <ul class="list">
-          <li><span class="idx">1</span><span><b>可持续赚钱：</b>加入 NodeShort 不只是刷剧，还能稳定获得平台收益，属于轻量级的“边看边赚”经济模型。</span></li>
-          <li><span class="idx">2</span><span><b>任务参与简单：</b>完成每日签到、邀请好友、看剧任务，即可自动累计 DP 与金币奖励。</span></li>
-          <li><span class="idx">3</span><span><b>数据展示：</b>注册用户超 10 万＋，累计分红超 120 万 DP，稳定运营超 300 天。</span></li>
-          <li><span class="idx">4</span><span><b>获取方式清晰：</b>联系客服或加入官方社群即可兑换奖励或解锁新手任务教程。</span></li>
-        </ul>
+        <h2>常见问题</h2>
+        <div class="grid-3">
+          <div class="card" style="padding:16px">
+            <h3>NodeShort 是什么？</h3>
+            <p class="muted">NodeShort 是一款由 Node Short Studios Pte. Ltd. 开发的以观看短剧为主的影视娱乐平台。用户可以通过观看短剧、签到和完成任务等方式获取金币和DP奖励。</p>
+          </div>
+          <div class="card" style="padding:16px">
+            <h3>如何参加本次活动？</h3>
+            <p class="muted">在活动期间，NodeShort 所有会员均可参与。用户只需邀请好友注册并签到，然后好友观看短剧，你即可自动累计金币与DP奖励。</p>
+          </div>
+          <div class="card" style="padding:16px">
+            <h3>如何兑换话费奖励？</h3>
+            <p class="muted">当您的金币达到起兑额度（1万金币）后，联系平台客服即可兑换等值的免费话费奖励。每天完成邀请任务后，您即获得当日的话费兑换资格。</p>
+          </div>
+        </div>
       </div>
     </section>
+
   </main>
 
   <footer>
@@ -204,7 +231,6 @@
           <div class="footer-card" id="footerGroup"><h3>Telegram 群组</h3></div>
           <div class="footer-card" id="footerCS"><h3>联系平台客服（CSKH）</h3></div>
         </div>
-        <a href="#platform-info" class="btn secondary">平台亮点</a>
       </div>
       <div class="brand" style="margin-top:24px;text-align:center;justify-content:center;display:flex;align-items:center">
         <img src="./assets/nodeshort-logo.png" alt="NodeShort Logo">
@@ -224,9 +250,7 @@
     const carousel=document.getElementById('carousel');
     const slides=carousel.querySelector('.slides');
     const dots=[...carousel.querySelectorAll('.dot')];
-    let idx=0; const go=i=>{idx=i%3; if(idx<0) idx+=3; 
-    slides.style.transform=`translateX(-${idx*100}%)`; 
-    dots.forEach((d,k)=>d.classList.toggle('active',k===idx))};
+    let idx=0; const go=i=>{idx=i%3; if(idx<0) idx+=3; slides.style.transform=`translateX(-${idx*100}%)`; dots.forEach((d,k)=>d.classList.toggle('active',k===idx))};
     setInterval(()=>go(idx+1),3500);
 
     // 防止滚动跳回顶部（去除锚点副作用）
