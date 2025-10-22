@@ -13,18 +13,30 @@
   <meta property="og:url" content="https://www.nodeshort.com/h5/#/?code=9HKKIP" />
   <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-  (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '855402777027838');fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '855402777027838');
+  fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=855402777027838&ev=PageView&noscript=1"/></noscript>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=855402777027838&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel Code -->
 
   <style>
-    :root{--bg:#0b0b0c;--card:#131316;--muted:#a6a8ad;--text:#f3f4f6;--gold:#efb21a;--accent:#e9a700;--brand:#ffd36b;--line:#212227;--shadow:0 10px 30px rgba(0,0,0,.35);--btn-fg:#1a1a1a}
-    :root[data-theme="light"]{--bg:#fff;--card:#fff;--muted:#5b5f66;--text:#121316;--gold:#efb21a;--accent:#e9a700;--brand:#ffcc5d;--line:#e9eaee;--shadow:0 10px 30px rgba(0,0,0,.08);--btn-fg:#121316}
+    :root{
+      --bg:#0b0b0c;--card:#131316;--muted:#a6a8ad;--text:#f3f4f6;--gold:#efb21a;--accent:#e9a700;--brand:#ffd36b;--line:#212227;--shadow:0 10px 30px rgba(0,0,0,.35);
+      --btn-fg:#1a1a1a;
+    }
+    :root[data-theme="light"]{
+      --bg:#ffffff;--card:#ffffff;--muted:#5b5f66;--text:#121316;--gold:#efb21a;--accent:#e9a700;--brand:#ffcc5d;--line:#e9eaee;--shadow:0 10px 30px rgba(0,0,0,.08);
+      --btn-fg:#121316;
+    }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"PingFang SC","Microsoft Yahei",sans-serif;line-height:1.55;overflow-x:hidden}
     img{display:block;max-width:100%}
@@ -95,7 +107,7 @@
   </header>
 
   <main>
-    <!-- Hero + 轮播图 保留 -->
+    <!-- Hero + 轮播图 -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
@@ -132,7 +144,19 @@
       </div>
     </section>
 
-    <!-- 1. 新手任务（卡片式） -->
+    <!-- 顺序 1：活动奖励 -->
+    <section class="section" id="rewards">
+      <div class="container">
+        <h2>活动奖励</h2>
+        <div class="grid-3">
+          <div class="card" style="padding:16px"><h3>💰 1K 金币 = 1K VND</h3><p class="muted">10K 起兑，上不封顶。</p></div>
+          <div class="card" style="padding:16px"><h3>🎁 免费领取兑换</h3><p class="muted">联系平台客服，活动时间内均可参与。</p></div>
+          <div class="card" style="padding:16px"><h3>👥 邀请好友参与</h3><p class="muted">每日完成邀请任务后，即可获得当日兑换资格。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 顺序 2：新手任务（卡片版） -->
     <section class="section" id="novice-tasks">
       <div class="container">
         <h2>新手任务</h2>
@@ -147,31 +171,7 @@
       </div>
     </section>
 
-    <!-- 2. 活动奖励 -->
-    <section class="section" id="rewards">
-      <div class="container">
-        <h2>活动奖励</h2>
-        <div class="grid-3">
-          <div class="card" style="padding:16px"><h3>💰 1K 金币 = 1K VND</h3><p class="muted">10K 起兑，上不封顶。</p></div>
-          <div class="card" style="padding:16px"><h3>🎁 免费领取兑换</h3><p class="muted">联系平台客服，活动时间内均可参与。</p></div>
-          <div class="card" style="padding:16px"><h3>👥 邀请好友参与</h3><p class="muted">每日完成邀请任务后，即可获得当日兑换资格。</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. 如何参与 -->
-    <section class="section" id="how">
-      <div class="container">
-        <h2>如何参与</h2>
-        <div class="grid-3">
-          <div class="card" style="padding:18px"><h3>1</h3><p class="muted">邀请好友在 NodeShort 注册并完成签到。</p></div>
-          <div class="card" style="padding:18px"><h3>2</h3><p class="muted">好友观看短剧，你自动累计金币与DP。</p></div>
-          <div class="card" style="padding:18px"><h3>3</h3><p class="muted">联系平台客服，免费领取话费兑换奖励。</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. 如何赚钱 -->
+    <!-- 顺序 3：如何赚钱 -->
     <section class="section" id="earn">
       <div class="container">
         <h2>如何赚钱</h2>
@@ -184,7 +184,19 @@
       </div>
     </section>
 
-    <!-- 5. 活动规则 -->
+    <!-- 顺序 4：如何参与 -->
+    <section class="section" id="how">
+      <div class="container">
+        <h2>如何参与</h2>
+        <div class="grid-3">
+          <div class="card" style="padding:18px"><h3>1</h3><p class="muted">邀请好友在 NodeShort 注册并完成签到。</p></div>
+          <div class="card" style="padding:18px"><h3>2</h3><p class="muted">好友观看短剧，你自动累计金币与DP。</p></div>
+          <div class="card" style="padding:18px"><h3>3</h3><p class="muted">联系平台客服，免费领取话费兑换奖励。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 顺序 5：活动规则 -->
     <section class="section" id="rules">
       <div class="container">
         <h2>活动规则</h2>
@@ -200,20 +212,7 @@
       </div>
     </section>
 
-    <!-- 6. 新手任务（列表式原版） -->
-    <section class="section" id="tasks">
-      <div class="container">
-        <h2>新手任务</h2>
-        <ul class="list">
-          <li><span class="idx">1</span><span>注册账号并登录</span></li>
-          <li><span class="idx">2</span><span>完成新手观剧任务</span></li>
-          <li><span class="idx">3</span><span>加入 Telegram 群，获取奖励通道</span></li>
-          <li><span class="idx">4</span><span>绑定钱包，开始兑换</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 7. 平台货币体系 -->
+    <!-- 顺序 6：平台货币体系 -->
     <section class="section" id="token">
       <div class="container">
         <h2>平台货币体系</h2>
@@ -231,7 +230,7 @@
       </div>
     </section>
 
-    <!-- 8. 内容娱乐收益模型（卡片式） -->
+    <!-- 顺序 7：内容娱乐收益模型 -->
     <section class="section" id="rewards-model">
       <div class="container">
         <h2>内容娱乐收益模型</h2>
@@ -244,7 +243,7 @@
       </div>
     </section>
 
-    <!-- Join 保持在尾部 -->
+    <!-- Join 保持在尾部，未在排序清单中但默认保留 -->
     <section class="section" id="join">
       <div class="container" style="text-align:center">
         <h2>立即加入社群，开启内容分红之路</h2>
