@@ -11,21 +11,21 @@
   <meta property="og:description" content="纯网页端｜看你爱的剧，自动领取金币、DP、钻石；娱乐也是投资。" />
   <meta property="og:image" content="./assets/nodeshort-og-1200x630.png" />
   <meta property="og:url" content="https://www.nodeshort.com/h5/#/?code=9HKKIP" />
-
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
-  s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-  (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '855402777027838'); fbq('track', 'PageView');
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '855402777027838');
+  fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=855402777027838&ev=PageView&noscript=1"/>
-  </noscript>
+  src="https://www.facebook.com/tr?id=855402777027838&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel Code -->
 
   <style>
@@ -66,6 +66,8 @@
     .card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    @media (max-width:900px){.grid-2{grid-template-columns:1fr}}
 
     .token{display:flex;gap:14px;align-items:center}
     .token img{width:42px;height:42px}
@@ -195,39 +197,45 @@
       </div>
     </section>
 
-    <section class="section" id="growth">
+    <!-- 新增内容开始 -->
+    <section class="section" id="tasks">
       <div class="container">
-        <h2>平台成长数据</h2>
-        <div class="grid-3">
-          <div class="card" style="padding:16px"><h3>用户数量</h3><p class="muted">截至2025年10月，平台注册用户已超过100万。</p></div>
-          <div class="card" style="padding:16px"><h3>累计观看</h3><p class="muted">用户累计观看时长已超过500万小时。</p></div>
-          <div class="card" style="padding:16px"><h3>活跃时长</h3><p class="muted">日均观看时长超过2小时，用户粘性显著。</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="start">
-      <div class="container">
-        <h2>三步轻松开始</h2>
-        <div class="grid-3">
-          <div class="card" style="padding:18px"><h3>1</h3><p class="muted">下载NodeShort App并注册账户。</p></div>
-          <div class="card" style="padding:18px"><h3>2</h3><p class="muted">观看短剧积累金币与DP奖励。</p></div>
-          <div class="card" style="padding:18px"><h3>3</h3><p class="muted">联系客服免费兑换话费奖励。</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <h2>常见问题解答</h2>
+        <h2>新手任务</h2>
         <ul class="list">
-          <li><span class="idx">1</span><span><strong>如何邀请好友参与活动？</strong><br><span class="muted">邀请好友注册并观看短剧后，您将自动获得相应的金币和DP奖励。</span></span></li>
-          <li><span class="idx">2</span><span><strong>邀请奖励何时发放？</strong><br><span class="muted">好友完成观看后，奖励会立即发放至您的账户中。</span></span></li>
-          <li><span class="idx">3</span><span><strong>如何联系客服或加入官方群组？</strong><br><span class="muted">点击页面上的“联系客服”或“Telegram群组”按钮，即可跳转到相应渠道获得帮助。</span></span></li>
-          <li><span class="idx">4</span><span><strong>活动结束后还能继续获得话费兑换资格吗？</strong><br><span class="muted">活动结束后仍可观看短剧赚取金币与DP，但免费话费兑换活动仅限活动期间。</span></span></li>
+          <li><span class="idx">1</span><span>注册账号并登录</span></li>
+          <li><span class="idx">2</span><span>完成新手观剧任务</span></li>
+          <li><span class="idx">3</span><span>加入 Telegram 群，获取奖励通道</span></li>
+          <li><span class="idx">4</span><span>绑定钱包，开始兑换</span></li>
         </ul>
       </div>
     </section>
+    <section class="section" id="earn">
+      <div class="container">
+        <h2>如何赚钱</h2>
+        <div class="grid-2">
+          <div class="card" style="padding:18px; text-align:center;"><h3>🎬 看剧每集获得10~500金币</h3></div>
+          <div class="card" style="padding:18px; text-align:center;"><h3>📩 邀请好友获得额外奖励</h3></div>
+          <div class="card" style="padding:18px; text-align:center;"><h3>💎 金币可兑换VND或话费</h3></div>
+          <div class="card" style="padding:18px; text-align:center;"><h3>🏅 获得NFT徽章享受额外分红</h3></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="model">
+      <div class="container">
+        <h2>内容娱乐收益模型</h2>
+        <p>NodeShort 将内容消费行为转化为可计量的资产。</p>
+        <p>用户通过刷剧获得DP，DP可提现或升级为平台钻石，钻石可用于购买NFT徽章、享受平台分红或参与社区治理。</p>
+      </div>
+    </section>
+    <section class="section" id="join">
+      <div class="container" style="text-align:center">
+        <h2>立即加入社群，开启内容分红之路</h2>
+        <p class="muted">平台分红每日限量发放，先到先得</p>
+        <a class="btn" href="https://t.me/NodeShortVN" target="_blank" rel="noopener">👉 立即进群</a>
+      </div>
+    </section>
+    <!-- 新增内容结束 -->
+
   </main>
 
   <footer>
@@ -265,7 +273,7 @@
     setInterval(()=>go(idx+1),3500);
 
     // 防止滚动跳回顶部（去除锚点副作用）
-    window.addEventListener('scroll',()=>{try{history.replaceState(null,'','')}catch(e){}},{passive:true});
+    window.addEventListener('scroll',()=>{try{history.replaceState(null,'',' ')}catch(e){}},{passive:true});
 
     const openNew = url => window.open(url,'_blank');
     document.getElementById('joinGroup').onclick=()=>openNew('https://t.me/NodeShortVN');
