@@ -87,6 +87,14 @@
     .dot.active{background:var(--brand)}
     @media (min-width:0){#carousel{aspect-ratio:9/16;max-height:80vh;}#carousel .slides{height:100%}}
 
+    /* Growth section */
+    @keyframes fadeInUp{0%{opacity:0;transform:translateY(30px);}100%{opacity:1;transform:translateY(0);}}
+    .growth-stat{animation:fadeInUp 1s ease both;transition:transform .3s}
+    .growth-stat:hover{transform:translateY(-5px) scale(1.03)}
+    .growth-icon{font-size:36px;margin-bottom:8px;color:var(--brand)}
+    .growth-number{font-size:34px;font-weight:800;color:var(--accent)}
+    .growth-label{color:var(--muted)}
+
     /* Footer */
     footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted)}
     .footer-col{text-align:center}
@@ -166,19 +174,25 @@
       </div>
     </section>
 
-    <!-- 2. 新手任务（卡片版） -->
-    <section class="section" id="novice-tasks">
-      <div class="container">
-        <h2>新手任务</h2>
+    <!-- 新增：成长数据（放在【如何赚钱】前） -->
+    <section class="section" id="growth">
+      <div class="container" style="text-align:center">
+        <h2 style="font-size:2rem;margin-bottom:20px">🚀 NodeShort 成长数据</h2>
         <div class="grid-3">
-          <div class="card" style="padding:18px; text-align:center;"><h3>1</h3><p class="muted">注册账号并登录</p>
-            <div style="margin-top:10px"><a class="btn primary" href="https://www.nodeshort.com/h5/#/?code=9HKKIP" target="_blank" rel="noopener">立即注册</a></div>
+          <div class="card growth-stat" style="padding:24px;">
+            <div class="growth-icon">👥</div>
+            <div class="growth-number" data-target="30" data-suffix="万+" aria-label="注册用户累计30万以上">0</div>
+            <div class="growth-label">注册用户</div>
           </div>
-          <div class="card" style="padding:18px; text-align:center;"><h3>2</h3><p class="muted">完成新手观剧任务</p>
-            <div style="margin-top:10px"><a class="btn secondary" href="#how">查看教程</a></div>
+          <div class="card growth-stat" style="padding:24px;animation-delay:.2s">
+            <div class="growth-icon">💎</div>
+            <div class="growth-number" data-target="120" data-suffix="万+" aria-label="累计分红120万以上">0</div>
+            <div class="growth-label">累计分红 DP</div>
           </div>
-          <div class="card" style="padding:18px; text-align:center;"><h3>3</h3><p class="muted">加入 Telegram 群，获取奖励通道</p>
-            <div style="margin-top:10px"><a class="btn primary" href="https://t.me/NodeShortVN" target="_blank" rel="noopener">加入群组</a></div>
+          <div class="card growth-stat" style="padding:24px;animation-delay:.4s">
+            <div class="growth-icon">⚙️</div>
+            <div class="growth-number" data-target="300" data-suffix="天+" aria-label="稳定运营300天以上">0</div>
+            <div class="growth-label">稳定运营</div>
           </div>
         </div>
       </div>
@@ -222,6 +236,16 @@
       <div class="container">
         <h2>常见问题解答（FAQ）</h2>
         <div class="grid-2">
+          <!-- 置顶的新手导向条目 -->
+          <div class="card" style="padding:18px;">
+            <h3>• Q: NodeShort 是什么？</h3>
+            <p class="muted">A: NodeShort 是一款由 Node Short Studios Pte. Ltd. 开发的以观看短剧为主的影视娱乐平台。用户可以通过观看短剧、签到和完成任务等方式获取金币和 DP 奖励。</p>
+          </div>
+          <div class="card" style="padding:18px;">
+            <h3>• Q: 如何参加本次活动？</h3>
+            <p class="muted">A: 在活动期间，NodeShort 所有会员均可参与。用户只需邀请好友注册并签到，然后好友观看短剧，你即可自动累计金币与 DP 奖励。</p>
+          </div>
+          <!-- 原有条目 -->
           <div class="card" style="padding:18px;">
             <h3>• Q: 平台合法吗？</h3>
             <p class="muted">A: NodeShort 依托真实影视内容与区块链分红模型运行，合规透明。</p>
@@ -343,6 +367,29 @@
     const openNew=url=>window.open(url,'_blank');
     document.getElementById('joinGroup')?.addEventListener('click',()=>openNew('https://t.me/NodeShortVN'));
     document.getElementById('contactCS')?.addEventListener('click',()=>openNew('https://t.me/NodeShort001'));
+    // count-up animation for growth numbers
+    let growthAnimated=false;
+    const runCountUp=()=>{
+      if(growthAnimated) return; growthAnimated=true;
+      document.querySelectorAll('#growth .growth-number').forEach(el=>{
+        const target=parseFloat(el.dataset.target||'0');
+        const suffix=el.dataset.suffix||'';
+        const duration=1600; // ms
+        const start=performance.now();
+        const step=(now)=>{
+          const p=Math.min(1,(now-start)/duration);
+          const val=Math.floor(p*target);
+          el.textContent = val.toLocaleString('zh-CN') + suffix;
+          if(p<1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      });
+    };
+    const io=new IntersectionObserver((ents)=>{
+      ents.forEach(e=>{ if(e.isIntersecting) { runCountUp(); io.disconnect(); } });
+    },{threshold:0.3});
+    const growthSection=document.getElementById('growth');
+    if(growthSection) io.observe(growthSection);
   </script>
 </body>
 </html>
