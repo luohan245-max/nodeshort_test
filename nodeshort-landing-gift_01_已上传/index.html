@@ -11,11 +11,13 @@
   <meta property="og:description" content="纯网页端｜看你爱的剧，自动领取金币、DP、钻石；娱乐也是投资。" />
   <meta property="og:image" content="./assets/nodeshort-og-1200x630.png" />
   <meta property="og:url" content="https://www.nodeshort.com/h5/#/?code=9HKKIP" />
+
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-  (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
   fbq('init','855402777027838');fbq('track','PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=855402777027838&ev=PageView&noscript=1"/></noscript>
@@ -37,14 +39,13 @@
     header.shrink .brand img{height:56px}
     .actions{display:flex;align-items:center;gap:10px;flex-wrap:nowrap}
 
-    /* Buttons — aligned with VN 版 */
+    /* Buttons */
     .btn{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:10px;padding:10px 14px;font-size:14px;font-weight:800;cursor:pointer;white-space:nowrap;transition:.2s transform,box-shadow .2s}
     .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:var(--btn-fg);box-shadow:var(--shadow)}
     .btn.secondary{background:transparent;color:var(--text);border:1px solid var(--line)}
     .btn.ghost{background:transparent;color:var(--muted)}
-    .btn:hover{transform:translateY(-1px)}
-    .btn.block{display:flex;width:100%;justify-content:center}
     .btn.lg{padding:14px 18px;font-size:15px;border-radius:12px}
+    .btn.block{display:flex;width:100%;justify-content:center}
 
     .theme-toggle{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--line);border-radius:10px;padding:8px 10px;color:var(--muted);cursor:pointer}
     @media(max-width:740px){.brand img{height:70px}.actions{flex-wrap:wrap;justify-content:center}.btn{padding:8px 12px;font-size:13px}.theme-toggle{padding:6px 8px;font-size:13px}}
@@ -110,7 +111,7 @@
   </header>
 
   <main>
-    <!-- Hero + 轮播图 保留 -->
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
@@ -195,7 +196,7 @@
             <div style="margin-top:10px"><a class="btn primary" href="https://www.nodeshort.com/h5/#/?code=9HKKIP" target="_blank" rel="noopener">立即邀请</a></div>
           </div>
           <div class="card" style="padding:18px; text-align:center;"><h3>💎 金币可兑换VND或话费</h3>
-            <div style="margin-top:10px"><a class="btn secondary" href="#rewards">查看汇率</a></div>
+            <div style="margin-top:10px"><a class="btn secondary" href="https://t.me/NodeShort001" target="_blank" rel="noopener">查看汇率</a></div>
           </div>
           <div class="card" style="padding:18px; text-align:center;"><h3>🏅 获得NFT徽章享受额外分红</h3>
             <div style="margin-top:10px"><a class="btn primary" href="https://t.me/NodeShort001" target="_blank" rel="noopener">了解分红</a></div>
@@ -216,8 +217,8 @@
       </div>
     </section>
 
-    <!-- 5. 活动规则 -->
-    <section class="section" id="rules">
+    <!-- 5. 活动规则（无底部CTA） -->
+    <section class="section" id="rules-block">
       <div class="container">
         <h2>活动规则</h2>
         <ul class="list">
@@ -229,7 +230,9 @@
           <li><span class="idx">6</span><span>一经发现作弊 / 羊毛党行为：立即取消奖励领取资格。</span></li>
           <li><span class="idx">7</span><span>本平台保留对活动的最终解释权和封禁处理权，凡参与活动视为同意以上条款。</span></li>
         </ul>
-        <div style="margin-top:12px"><a class="btn ghost" href="#cta">返回顶部</a></div>
+        <div style="margin-top:24px;text-align:center;">
+          <a href="https://www.nodeshort.com/h5/#/?code=9HKKIP" class="btn primary lg" target="_blank" rel="noopener">我已阅读规则，立即参与</a>
+        </div>
       </div>
     </section>
 
@@ -254,7 +257,7 @@
       </div>
     </section>
 
-    <!-- 7. 内容娱乐收益模型（卡片） -->
+    <!-- 7. 内容娱乐收益模型 -->
     <section class="section" id="rewards-model">
       <div class="container">
         <h2>内容娱乐收益模型</h2>
@@ -267,7 +270,7 @@
       </div>
     </section>
 
-    <!-- Join CTA 固定在尾部，按钮按新规范 -->
+    <!-- Join CTA -->
     <section class="section" id="join">
       <div class="container" style="text-align:center;max-width:560px">
         <h2>立即加入社群，开启内容分红之路</h2>
@@ -283,9 +286,6 @@
 
   <footer>
     <div class="container">
-      <div class="footer-col">
-        <a href="https://www.nodeshort.com/h5/#/?code=9HKKIP" class="btn primary lg" target="_blank" rel="noopener">我已阅读规则，立即参与</a>
-      </div>
       <div class="footer-col" style="margin-top:18px">
         <h2>官方社群与客服</h2>
         <p class="muted">加入群组，第一时间获取空投、活动与上新通知。</p>
@@ -306,7 +306,7 @@
     const root=document.documentElement; const key='ns_theme';
     const setTheme=t=>{root.setAttribute('data-theme',t);localStorage.setItem(key,t)};
     setTheme(localStorage.getItem(key)||'dark');
-    document.getElementById('themeToggle').addEventListener('click',()=>{setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark')});
+    document.getElementById('themeToggle')?.addEventListener('click',()=>{setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark')});
     const hdr=document.querySelector('header');
     window.addEventListener('scroll',()=>hdr.classList.toggle('shrink',window.scrollY>40),{passive:true});
 
