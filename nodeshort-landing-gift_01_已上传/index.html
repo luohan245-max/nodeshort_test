@@ -95,6 +95,10 @@
     .growth-number{font-size:34px;font-weight:800;color:var(--accent)}
     .growth-label{color:var(--muted)}
 
+    /* Start/Join cards */
+    .card-animate{animation:fadeInUp 1s ease both;transition:transform .3s}
+    .card-animate:hover{transform:translateY(-5px) scale(1.03)}
+
     /* Footer */
     footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted)}
     .footer-col{text-align:center}
@@ -228,6 +232,31 @@
           <div class="card" style="padding:18px"><h3>2</h3><p class="muted">好友观看短剧，你自动累计金币与DP。</p></div>
           <div class="card" style="padding:18px"><h3>3</h3><p class="muted">联系平台客服，免费领取话费兑换奖励。</p></div>
         </div>
+      </div>
+    </section>
+
+    <!-- 新增：三步轻松开始 + 加入群组 CTA（卡片化），放在【如何参与】之后 -->
+    <section class="section" id="start-join">
+      <div class="container" style="text-align:center">
+        <h2 style="font-size:2rem;margin-bottom:28px">🔥 三步轻松开始</h2>
+        <div class="grid-3">
+          <div class="card card-animate" style="padding:24px;">
+            <h3>① 注册账号</h3>
+            <p>开启你的刷剧之旅，登录即可体验 NodeShort 的娱乐与收益。</p>
+          </div>
+          <div class="card card-animate" style="padding:24px;animation-delay:.15s">
+            <h3>② 完成任务</h3>
+            <p>每日签到、看剧、邀请好友，持续累积 DP 资产，提升收益等级。</p>
+          </div>
+          <div class="card card-animate" style="padding:24px;animation-delay:.3s">
+            <h3>③ 兑换与提现</h3>
+            <p>将 DP 兑换钻石，可提现至钱包或购买专属 NFT 徽章，享更多分红。</p>
+          </div>
+        </div>
+        <div class="hr" style="margin:40px 0"></div>
+        <h2 style="font-size:1.8rem;margin-bottom:8px">📌 加入官方社群领取更多奖励</h2>
+        <p class="muted" style="margin-bottom:18px">每日推送新剧、空投福利、专属邀请码</p>
+        <a href="https://t.me/NodeShortVN" target="_blank" rel="noopener" class="btn primary lg" style="font-size:1.1rem">👉 立即进群</a>
       </div>
     </section>
 
@@ -367,6 +396,7 @@
     const openNew=url=>window.open(url,'_blank');
     document.getElementById('joinGroup')?.addEventListener('click',()=>openNew('https://t.me/NodeShortVN'));
     document.getElementById('contactCS')?.addEventListener('click',()=>openNew('https://t.me/NodeShort001'));
+
     // count-up animation for growth numbers
     let growthAnimated=false;
     const runCountUp=()=>{
